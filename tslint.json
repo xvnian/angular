@@ -1,0 +1,10 @@
+{
+  "rules": {
+    "no-any": true
+  },
+  "linterOptions": {
+    "exclude": [
+      "**/node_modules/**"
+    ]
+  }
+}

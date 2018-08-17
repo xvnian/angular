@@ -9,7 +9,7 @@ function resolve (dir) {
 }
 
 const createLintingRule = () => ({
-  test: /\.(js|vue)$/,
+  test: /\.(js|vue|ts)$/,
   loader: 'eslint-loader',
   enforce: 'pre',
   include: [resolve('src'), resolve('test')],
@@ -22,7 +22,7 @@ const createLintingRule = () => ({
 module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
-    app: './src/main.js'
+    app: './src/main.ts'
   },
   output: {
     path: config.build.assetsRoot,
@@ -39,8 +39,18 @@ module.exports = {
     }
   },
   module: {
+    // preLoaders: [{
+    //   test: /\.ts$/,
+    //   loader: 'tslint'
+    // }],
     rules: [
       ...(config.dev.useEslint ? [createLintingRule()] : []),
+      {
+        test: /\.ts$/,
+        enforce: 'pre',
+        loader: 'tslint-loader',
+        options: { /* Loader options go here */ }
+      },
       {
         test: /\.tsx?$/,
         loader: 'ts-loader',

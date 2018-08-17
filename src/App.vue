@@ -1,13 +1,28 @@
 <template>
   <div id="app">
     <router-view/>
+
+    {{ msg }}
+
+    <div @click="goto">
+      kkkkkk
+    </div>
   </div>
 </template>
-
-<script>
-export default {
-  name: 'App'
-}
+<script lang="ts">
+import Vue from 'vue'
+export default Vue.extend({
+  data() {
+    return {
+      msg: 222
+    }
+  },
+  methods: {
+    goto() {
+      console.log('goto')
+    }
+  }
+})
 </script>
 
 <style>

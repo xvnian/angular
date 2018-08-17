@@ -73,6 +73,8 @@ export default {
     // this.$observables.msg.subscribe(msg => console.log(msg));
     // console.log(this.$observables)
 
+    console.log(this)
+
     this.$watchAsObservable('a').subscribe(
       ({ newValue, oldValue }) => console.log('stream value', newValue, oldValue),
       err => console.error(err),

@@ -4,16 +4,7 @@
     <p>
       {{title}}
     </p>
-    {{ msg }}  {{ count }} 
-
-    <div>
-      <button @click="a= a+1"> +++</button>
-      {{ aPlusOne }}
-    </div>
-
-    <div>
-      <input type="text"> {{ inputValue }}
-    </div>
+    {{ msg }}  {{ count }}
   </div>
 </template>
 <script>
@@ -38,8 +29,7 @@ export default {
   data () {
     return {
       someData: 'soso',
-      title: 'Welcome to Your Vue.js App',
-      a: 1
+      title: 'Welcome to Your Vue.js App'
     }
   },
   domStreams: ['plus$'],
@@ -50,17 +40,12 @@ export default {
     // 来源流以 `{ event: HTMLEvent, data?: any }` 的格式发送数据
     return {
       msg: msg,
-      count: this.plus$.pipe(
-        pluck('data'),
+      count: merge(
+        this.plus$.pipe(map(() => 1)),
+        // this.minus$.pipe(pluck('data'))
+      ).pipe(
         startWith(0),
-        scan((total, change) => total + change)
-      ),
-      aPlusOne: this.$watchAsObservable('a').pipe(
-        pluck('newValue'),
-        map(a => a + 1)
-      ),
-      inputValue: this.$fromDOMEvent('input', 'keyup').pipe(
-        pluck('target', 'value')
+        scan((total, change) => total + change, 3)
       )
       // count: this.plus$.pipe(
       //   map(() => 1),
@@ -70,14 +55,8 @@ export default {
     };
   },
   created() {
-    // this.$observables.msg.subscribe(msg => console.log(msg));
-    // console.log(this.$observables)
-
-    this.$watchAsObservable('a').subscribe(
-      ({ newValue, oldValue }) => console.log('stream value', newValue, oldValue),
-      err => console.error(err),
-      () => console.log('complete')
-    );
+    this.$observables.msg.subscribe(msg => console.log(msg));
+    console.log(this.$observables)
   }
 }
 </script>
