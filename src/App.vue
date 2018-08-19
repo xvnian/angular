@@ -2,11 +2,11 @@
   <div id="app">
     <router-view/>
 
-    {{ msg }}
+    <!-- {{ msg }}
 
     <div @click="goto">
       kkkkkk
-    </div>
+    </div> -->
   </div>
 </template>
 <script lang="ts">

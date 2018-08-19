@@ -4,10 +4,11 @@ import HelloWorld from '@/components/HelloWorld.vue'
 import SwipeCell from '@/components/swipe-cell.vue'
 import Rxjs from '@/components/rxjs-search.vue'
 import Routerdemo from '@/components/router.vue'
+import Ts from '@/components/ts.vue'
 
 Vue.use(Router)
 
-let a:any =9
+// let a:any =9
 
 export default new Router({
   routes: [
@@ -15,6 +16,10 @@ export default new Router({
       path: '/',
       name: 'HelloWorld',
       component: HelloWorld
+    },
+    {
+      path: '/ts',
+      component: Ts
     },
     {
       path: '/cell',

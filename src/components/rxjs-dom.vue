@@ -34,7 +34,7 @@ export default {
   },
   domStreams: ['plus$'],
   subscriptions() {
-    // 声明接收的 Subjects
+    // 声明接收的 Subjects 
     // this.plus$ = new Subject();
     // ...然后使用 Subjects 作为来源流创建订阅。
     // 来源流以 `{ event: HTMLEvent, data?: any }` 的格式发送数据
