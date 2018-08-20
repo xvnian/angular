@@ -1,1 +1,1 @@
-export var ddd: any
+export let ddd: any

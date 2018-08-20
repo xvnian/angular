@@ -4,7 +4,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router/index'
 import VueRx from 'vue-rx'
- 
+
 Vue.use(VueRx)
 
 Vue.config.productionTip = false

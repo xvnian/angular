@@ -7,12 +7,14 @@
 <script lang="ts">
 let a: any = 1; 
 
-console.log(ddd)
+// console.log(ddd)
 
 class Person {
   name: string;
   age: number;
   constructor() {
+    this.name = '1'
+    this.age = 1
   };
 
   eat(){
