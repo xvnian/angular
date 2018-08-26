@@ -35,6 +35,23 @@ export default Vue.extend({
       dsdsd
       sdsds`
     };
+  },
+  computed:{
+    ddd(){
+      return this.msg
+    },
+    ccc() {
+      return this.ccc
+    }
+  },
+  props: {
+    name: {
+      type: String,
+      default: 'xunian'
+    }
+  },
+  created() {
+    console.log(this.name)
   }
 });
 </script>
