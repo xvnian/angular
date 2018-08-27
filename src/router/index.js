@@ -5,6 +5,7 @@ import SwipeCell from '@/components/swipe-cell.vue'
 import Rxjs from '@/components/rxjs-search.vue'
 import Routerdemo from '@/components/router.vue'
 import Ts from '@/components/ts.vue'
+import TsClass from '@/components/ts-class.vue'
 
 Vue.use(Router)
 
@@ -20,6 +21,10 @@ export default new Router({
     {
       path: '/ts',
       component: Ts
+    },
+    {
+      path: '/ts-class',
+      component: TsClass
     },
     {
       path: '/cell',

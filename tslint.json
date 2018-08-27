@@ -1,7 +1,7 @@
 {
   "defaultSeverity": "error",
   "extends": [
-    "tslint-eslint-rules"
+    // "tslint-eslint-rules"
   ],
   "rules": {
     "align": [true,
