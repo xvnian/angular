@@ -62,14 +62,7 @@
     ],
 
     "object-curly-spacing": true,
-    "ter-prefer-arrow-callback": true,
-
-    "jsx-boolean-value": [true, "always"],
-    "jsx-curly-spacing": [true, "always"],
-    "jsx-equals-spacing": [true, "never"],
-    "jsx-no-lambda": true,
-    "jsx-no-string-ref": true,
-    "jsx-wrap-multiline": false
+    "ter-prefer-arrow-callback": true
   },
   "linterOptions": {
     "exclude": [

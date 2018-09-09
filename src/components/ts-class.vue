@@ -10,6 +10,9 @@
 
 <script lang="ts">
 import { Vue, Component, Prop } from "vue-property-decorator";
+
+import jsVue from './rxjs.vue'
+
 @Component
 export default class HelloDecorator extends Vue {
   @Prop() name!: string;

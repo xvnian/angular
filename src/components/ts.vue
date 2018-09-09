@@ -5,7 +5,14 @@
   </div>
 </template>
 <script lang="ts">
+import cc from "utils/test";
+
+
+
 let a: any = 1; 
+let handler = () => {
+  console.log(1)
+}
 
 // console.log(ddd)
 

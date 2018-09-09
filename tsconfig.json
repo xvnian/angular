@@ -16,6 +16,27 @@
       "dom"
     ],
     "sourceMap": true,
-    "pretty": true
+    "pretty": true,
+    "baseUrl": "./",
+    "paths": {
+      "utils/*": [
+        "src/utils/*"
+      ],
+      "@models/*": [
+        "models/*"
+      ],
+      "@plugins/*": [
+        "plugins/*"
+      ],
+      "@routes/*": [
+        "routes/*"
+      ],
+      "@services/*": [
+        "services/*"
+      ],
+      "@api": [
+        "api/index"
+      ]
+    }
   }
 }
