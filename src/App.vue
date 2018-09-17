@@ -19,8 +19,11 @@ export default Vue.extend({
   },
   methods: {
     goto() {
-      console.log('goto')
+      // console.log('goto')
     }
+  },
+  created() {
+    this.$toast('1111')
   }
 })
 </script>

@@ -2,16 +2,19 @@
 <!-- This is an alternative way to define the Hello component using decorators -->
 <template>
     <div>
-        <div class="greeting">Hello {{name}}{{exclamationMarks}}</div>
+      <div class="greeting">Hello {{name}}{{exclamationMarks}}</div>
         <button @click="decrement">-</button>
         <button @click="increment">+</button>
+
+        <div>  <input type="text" @change="handlerChange"></div>
+        <div><input type="text" @click="handlerClick"></div>
     </div>
 </template>
 
 <script lang="ts">
 import { Vue, Component, Prop } from "vue-property-decorator";
 
-import jsVue from './rxjs.vue'
+import jsVue from "./rxjs.vue";
 
 @Component
 export default class HelloDecorator extends Vue {
@@ -24,7 +27,15 @@ export default class HelloDecorator extends Vue {
 
   constructor() {
     super();
-    console.log(this.name);
+    // console.log(this.name);
+  }
+
+  handlerChange() {
+    console.log(1);
+  }
+
+  handlerClick() {
+    console.log(2);
   }
 
   increment() {
@@ -36,14 +47,13 @@ export default class HelloDecorator extends Vue {
     }
   }
   get exclamationMarks(): string {
-    console.log(this.enthusiasm);
+    // console.log(this.enthusiasm);
     return Array(this.enthusiasm + 1).join("!");
   }
 }
 </script>
 
-<style>
-.greeting {
-  font-size: 20px;
-}
+<style lang="stylus" scoped>
+.greeting
+  font-size 20px
 </style>

@@ -1,23 +1,33 @@
 {
   "defaultSeverity": "error",
   "extends": [
-    // "tslint-eslint-rules"
+    "tslint-eslint-rules"
   ],
   "rules": {
-    "align": [true,
+    "align": [
+      true,
       "parameters"
     ],
     "class-name": true,
-    "comment-format": [true,
+    "comment-format": [
+      true,
       "check-space"
     ],
     "curly": true,
     "eofline": true,
     "import-spacing": true,
-    "indent": [true, "spaces", 2],
-    "max-line-length": [true, 150],
+    "indent": [
+      true,
+      "spaces",
+      2
+    ],
+    "max-line-length": [
+      true,
+      150
+    ],
     "no-consecutive-blank-lines": true,
-    "no-console": [true,
+    "no-console": [
+      true,
       "log",
       "trace"
     ],
@@ -31,7 +41,8 @@
     "no-trailing-whitespace": true,
     "no-var-keyword": true,
     "no-var-requires": false,
-    "one-line": [true,
+    "one-line": [
+      true,
       "check-catch",
       "check-else",
       "check-finally",
@@ -39,28 +50,35 @@
       "check-whitespace"
     ],
     "prefer-const": true,
-    "quotemark": [true,
+    "quotemark": [
+      true,
       "avoid-escape",
       "jsx-single",
       "single"
     ],
-    "semicolon": [true, "never"],
-    "typedef-whitespace": [true, {
-      "call-signature": "nospace",
-      "index-signature": "nospace",
-      "parameter": "nospace",
-      "property-declaration": "nospace",
-      "variable-declaration": "nospace"
-    }],
+    "semicolon": [
+      true,
+      "never"
+    ],
+    "typedef-whitespace": [
+      true,
+      {
+        "call-signature": "nospace",
+        "index-signature": "nospace",
+        "parameter": "nospace",
+        "property-declaration": "nospace",
+        "variable-declaration": "nospace"
+      }
+    ],
     "use-isnan": true,
-    "whitespace": [true,
+    "whitespace": [
+      true,
       "check-branch",
       "check-decl",
       "check-operator",
       "check-separator",
       "check-type"
     ],
-
     "object-curly-spacing": true,
     "ter-prefer-arrow-callback": true
   },

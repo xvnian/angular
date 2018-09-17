@@ -7,12 +7,10 @@
 <script lang="ts">
 import cc from "utils/test";
 
-
-
-let a: any = 1; 
+let a: any = 1;
 let handler = () => {
-  console.log(1)
-}
+  console.log(1);
+};
 
 // console.log(ddd)
 
@@ -20,18 +18,20 @@ class Person {
   name: string;
   age: number;
   constructor() {
-    this.name = '1'
-    this.age = 1
-  };
+    this.name = "1";
+    this.age = 1;
+  }
 
-  eat(){
-    this.name = ''
+  eat() {
+    this.name = "";
   }
 }
 
-let xunian: Person = new Person()
+let xunian: Person = new Person();
 
-xunian.name = '111'
+xunian.name = "111";
+
+// myLi
 
 import Vue from "vue";
 export default Vue.extend({
@@ -43,22 +43,22 @@ export default Vue.extend({
       sdsds`
     };
   },
-  computed:{
-    ddd(){
-      return this.msg
+  computed: {
+    ddd() {
+      return this.msg;
     },
     ccc() {
-      return this.ccc
+      return this.ccc;
     }
   },
   props: {
     name: {
       type: String,
-      default: 'xunian'
+      default: "xunian"
     }
   },
   created() {
-    console.log(this.name)
+    console.log(this.name);
   }
 });
 </script>

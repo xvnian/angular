@@ -2,8 +2,13 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App.vue'
-import router from './router/index'
+import router from './router/index.js'
 import VueRx from 'vue-rx'
+
+import MintUI from 'mint-ui'
+import 'mint-ui/lib/style.min.css'
+
+Vue.use(MintUI)
 
 Vue.use(VueRx)
 
