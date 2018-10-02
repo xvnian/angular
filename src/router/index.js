@@ -31,6 +31,14 @@ export default new Router({
       component: SwipeCell
     },
     {
+      path: '/project/create',
+      component: SwipeCell
+    },
+    {
+      path: '/project/:projectId/detail',
+      component: TsClass
+    },
+    {
       path: '/rxjs',
       component: Rxjs
     },
