@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
-    "target": "es2017",
+    "target": "esnext",
     "allowSyntheticDefaultImports": false,
+    "experimentalDecorators": true,
     "baseUrl": "./",
     "paths": {
       "utils/*": ["src/utils/*"],

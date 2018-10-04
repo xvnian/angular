@@ -1,8 +1,9 @@
 <template>
   <div>
-      <div @click="gotoMember">q=1</div>
-      <div @click="add">addd</div>
-      <tt></tt>
+    <div @click="gotoMember" title="2">q=1</div>
+
+        <div @click="add">addd</div>
+    <tt></tt>
   </div>
 </template>
 <script>
@@ -11,25 +12,27 @@ import clonedeep from 'lodash.clonedeep'
 export default {
   data() {
     return {
-      a: [{
-        b: 3
-      }]
+      a: [
+        {
+          b: 3
+        }
+      ]
     }
   },
-  components:{
+  components: {
     tt
   },
   watch: {
-    $route (to, from) {
+    $route(to, from) {
       console.log(to, from)
     },
-    'a'() {
+    a() {
       console.log(1)
     }
   },
   methods: {
     add() {
-      this.a[0].b ++
+      this.a[0].b++
 
       // clonedeep
 
@@ -46,6 +49,7 @@ export default {
   }
 }
 </script>
-<style scoped>
-
+<style scoped lang="stylus">
+.aa
+  width 100px
 </style>

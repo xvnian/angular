@@ -22,21 +22,22 @@ const createLintingRule = () => ({
 module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
-    app: './src/main.ts'
+    app: './src/main.tsx'
   },
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',
-    publicPath: process.env.NODE_ENV === 'production'
-      ? config.build.assetsPublicPath
-      : config.dev.assetsPublicPath
+    publicPath:
+      process.env.NODE_ENV === 'production'
+        ? config.build.assetsPublicPath
+        : config.dev.assetsPublicPath
   },
   resolve: {
     extensions: ['.js', '.vue', '.json', '.ts', '.tsx'],
     alias: {
-      'vue$': 'vue/dist/vue.esm.js',
+      vue$: 'vue/dist/vue.esm.js',
       '@': resolve('src'),
-      'utils': resolve('src/utils')
+      utils: resolve('src/utils')
     }
   },
   module: {
@@ -47,18 +48,27 @@ module.exports = {
     rules: [
       ...(config.dev.useEslint ? [createLintingRule()] : []),
       {
-        test: /\.ts$/,
+        test: /\.tsx?$/,
         enforce: 'pre',
         loader: 'tslint-loader',
-        options: { /* Loader options go here */ }
+        options: {
+          /* Loader options go here */
+        }
       },
       {
         test: /\.tsx?$/,
-        loader: 'ts-loader',
+        // loader: 'ts-loader',
         exclude: /node_modules/,
-        options: {
-          appendTsSuffixTo: [/\.vue$/],
-        }
+        use: [
+          'babel-loader',
+          {
+            loader: 'ts-loader',
+            options: { appendTsxSuffixTo: [/\.vue$/] }
+          }
+        ]
+        // options: {
+        //   appendTsSuffixTo: [/\.vue$/]
+        // }
       },
       {
         test: /\.vue$/,
@@ -66,9 +76,13 @@ module.exports = {
         options: vueLoaderConfig
       },
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         loader: 'babel-loader',
-        include: [resolve('src'), resolve('test'), resolve('node_modules/webpack-dev-server/client')]
+        include: [
+          resolve('src'),
+          resolve('test'),
+          resolve('node_modules/webpack-dev-server/client')
+        ]
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,

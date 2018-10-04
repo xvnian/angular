@@ -6,6 +6,7 @@ import Rxjs from '@/components/rxjs-search.vue'
 import Routerdemo from '@/components/router.vue'
 import Ts from '@/components/ts.vue'
 import TsClass from '@/components/ts-class.vue'
+import jsx from '@/components/jsx-component.tsx'
 
 Vue.use(Router)
 
@@ -17,6 +18,11 @@ export default new Router({
       path: '/',
       name: 'HelloWorld',
       component: HelloWorld
+    },
+    {
+      path: '/jsx',
+      name: 'jsx',
+      component: jsx
     },
     {
       path: '/ts',

@@ -4,39 +4,22 @@
     "allowJs": true,
     "module": "es2015",
     "target": "es5",
+    "jsx": "preserve",
     "moduleResolution": "node",
     "experimentalDecorators": true,
     "isolatedModules": true,
-    "typeRoots": [
-      "./types",
-      "./node_modules/vue/types"
-    ],
-    "lib": [
-      "es2017",
-      "dom"
-    ],
+    "typeRoots": ["./types", "./node_modules/vue/types"],
+    "lib": ["es2017", "dom"],
     "sourceMap": true,
     "pretty": true,
     "baseUrl": "./",
     "paths": {
-      "utils/*": [
-        "src/utils/*"
-      ],
-      "@models/*": [
-        "models/*"
-      ],
-      "@plugins/*": [
-        "plugins/*"
-      ],
-      "@routes/*": [
-        "routes/*"
-      ],
-      "@services/*": [
-        "services/*"
-      ],
-      "@api": [
-        "api/index"
-      ]
+      "utils/*": ["src/utils/*"],
+      "@models/*": ["models/*"],
+      "@plugins/*": ["plugins/*"],
+      "@routes/*": ["routes/*"],
+      "@services/*": ["services/*"],
+      "@api": ["api/index"]
     }
   }
 }

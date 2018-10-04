@@ -4,7 +4,7 @@
     <p>
       {{title}}
     </p>
-    {{ msg }}  {{ count }} 
+    {{ msg }} {{ count }}
 
     <div>
       <button @click="a= a+1"> +++</button>
@@ -14,7 +14,7 @@
     <div>
       <input type="text"> {{ inputValue }}
     </div>
-  </div>
+    </div>
 </template>
 <script>
 import Vue from "vue";
@@ -24,7 +24,7 @@ import Vue from "vue";
 
 // Rx.Observable.of(1,2,3)
 
-import { Observable } from "rxjs/Observable";
+import { Observable } from "rxjs/Observable"
 import "rxjs/add/observable/of";
 import "rxjs/add/operator/map";
 
@@ -32,6 +32,8 @@ import { Subject, merge } from "rxjs";
 import { map, startWith, scan, pluck } from "rxjs/operators";
 
 const msg = Observable.of(1, 2, 3).map(x => x + "!!!");
+
+const _ = require('lodash')
 
 export default {
   name: "HelloWorld",
