@@ -1,7 +1,6 @@
 <template>
   <div>
     <div @click="gotoMember" title="2">q=1</div>
-
         <div @click="add">addd</div>
     <tt></tt>
   </div>

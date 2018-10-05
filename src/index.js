@@ -8,6 +8,8 @@ import VueRx from 'vue-rx'
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.min.css'
 
+// import elementUi from "element-ui"
+
 Vue.use(MintUI)
 
 Vue.use(VueRx)

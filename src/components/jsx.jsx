@@ -7,14 +7,14 @@ export default class HelloDecorator extends Vue {
     // console.log(this.name);
   }
 
-  fff = false;
+  fff = false
 
   handlerChange() {
     // debugger
     // console.log("'1'")
   }
 
-  render(h) {
+  render( h ) {
     return <div onClick={ this.handlerChange }> 111</div>
   }
 }

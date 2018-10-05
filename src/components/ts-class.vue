@@ -43,6 +43,7 @@ export default class HelloDecorator extends Vue {
   constructor() {
     super()
     // console.log(this.name);
+    
   }
 
   handlerChange() {

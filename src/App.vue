@@ -23,7 +23,7 @@ export default Vue.extend({
     }
   },
   created() {
-    this.$toast('1111')
+    // this.$toast('1111')
   }
 })
 </script>
